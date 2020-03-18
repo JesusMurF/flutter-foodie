@@ -10,7 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Text('Hello world',
-            style: TextStyle(color: Colors.white, fontSize: 55.0)));
+        home: Center(
+          child: Text('Hello world',
+              style: TextStyle(color: Colors.white, fontSize: 55.0)),
+        ));
   }
 }
