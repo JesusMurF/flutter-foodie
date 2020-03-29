@@ -13,7 +13,15 @@ class MyApp extends StatelessWidget {
             image: DecorationImage(
                 image: AssetImage("images/Home.png"), fit: BoxFit.cover),
           ),
-          child: Center(child: Image.asset('images/rosco.png')),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [Image.asset('images/rosco.png')])
+            ],
+          ),
         ),
       ),
     );
