@@ -1,18 +1,21 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-main(List<String> args) {
-  runApp(new MyApp());
-}
+void main() => runApp(MyApp());
 
-// Aplicacion basica
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Center(
-          child: Text('Hello world',
-              style: TextStyle(color: Colors.white, fontSize: 55.0)),
-        ));
+      title: 'Material App',
+      home: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("images/Home.png"), fit: BoxFit.cover),
+          ),
+          child: Center(child: Image.asset('images/rosco.png')),
+        ),
+      ),
+    );
   }
 }
