@@ -38,12 +38,14 @@ class MyApp extends StatelessWidget {
             Text(
               'Foodie',
               style: TextStyle(
+                  fontFamily: 'Quicksand',
                   color: Colors.white,
                   fontSize: 40.0,
                   fontWeight: FontWeight.bold),
             ),
             Text('one-click food',
                 style: TextStyle(
+                    fontFamily: 'Quicksand',
                     color: Colors.white,
                     fontSize: 20.0,
                     fontWeight: FontWeight.w400)),
