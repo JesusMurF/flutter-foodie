@@ -14,7 +14,18 @@ class MyApp extends StatelessWidget {
                 image: AssetImage("images/Home.png"), fit: BoxFit.cover),
           ),
           child: Container(
-              margin: EdgeInsets.only(top: 150.0), child: _foodieContainer()),
+              margin: EdgeInsets.only(top: 150.0),
+              child: Stack(children: [
+                _foodieContainer(),
+                new Positioned(
+                    child: Image.asset("images/plato_verduras.png"),
+                    top: 200.0),
+                new Positioned(
+                  child: Image.asset("images/plato_manzana.png"),
+                  right: 0,
+                  bottom: 180.0,
+                ),
+              ])),
         ),
       ),
     );
@@ -29,29 +40,27 @@ class MyApp extends StatelessWidget {
   }
 
   Widget _foodieColumn() {
-    return Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-            Image.asset('images/rosco.png'),
-            SizedBox(height: 20),
-            Text(
-              'Foodie',
-              style: TextStyle(
-                  fontFamily: 'Quicksand',
-                  color: Colors.white,
-                  fontSize: 40.0,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text('one-click food',
-                style: TextStyle(
-                    fontFamily: 'Quicksand',
-                    color: Colors.white,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w400)),
-          ]),
-          Expanded(child: _orderButtonColumn())
-        ]);
+    return Column(mainAxisSize: MainAxisSize.max, children: [
+      Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        Image.asset('images/rosco.png'),
+        SizedBox(height: 20),
+        Text(
+          'Foodie',
+          style: TextStyle(
+              fontFamily: 'Quicksand',
+              color: Colors.white,
+              fontSize: 40.0,
+              fontWeight: FontWeight.bold),
+        ),
+        Text('one-click food',
+            style: TextStyle(
+                fontFamily: 'Quicksand',
+                color: Colors.white,
+                fontSize: 20.0,
+                fontWeight: FontWeight.w400)),
+      ]),
+      Expanded(child: _orderButtonColumn())
+    ]);
   }
 
   Widget _orderButtonColumn() {
